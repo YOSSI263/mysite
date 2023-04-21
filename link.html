@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <title>הלינקיה של אביי</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Rubik, sans-serif;
+            background-color: #f7f5ff;
+            color: #370fff;
+        }
+
+        header {
+            background-color: #162eff;
+            color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d4ff00;
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #0123ff;
+        }
+
+        lil {
+            font-size: 28px;
+            line-height: 4;
+            margin-bottom: 20px;
+            color: #f7f5ff;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #4A90E2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        ul li a:hover {
+            color: #333333;
+        }
+
+        footer {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            text-align: center;
+            color: #AAAAAA;
+        }
+
+        footer:hover {
+            color: #0561ff;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .square {
+            width: 300px;
+            height: 300px;
+        }
+
+        .rectangular {
+            width: 500px;
+            height: 300px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease-in-out;
+            //cursor: pointer;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.4);
+        }
+
+        .grid-item h3,
+        .grid-item p {
+            margin: 10px;
+            text-align: center;
+            position: relative;
+            background-color: rgba(102, 255, 213, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none !important;
+            color: blue;
+        }
+
+        .grid-item h3 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .grid-item p {
+            font-size: 16px;
+        }
+
+        /* Styling for the modal overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 30%;
+            left: 30%;
+            right: 30%;
+            bottom: 30%;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 2;
+            display: none;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        .modal-content img {
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        /* Show/hide the modal overlay */
+        .modal-overlay.show {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> 🐔 הלינקיה של אביי</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html#about">קצת עלי</a></li>
+                <li><a href="/index.html#services">שירותים מיוחדים</a></li>
+                <li><a href="/index.html#products">המוצרים שלנו</a></li>
+                <li><a href="/index.html#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <lil>:)</lil>
+
+    <div class="grid">
+        <div class="grid-item square">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEX///8ArEdbuXQAgy1Ttm6r2bZevHcmkUMAgSwAokHh9uoAqkEApzhrw4MAkDZPtWvb7+BLvHBzyI58zpiX0KWf1K2OzJ1av3ny+fQApjPC48rN6NR+x5G85co7oljn9+43uGRjvHvV7Nvs9++l3LgrmEpNr2gTijfL69YeslaW1quG0Z+z3b4AmDtwwYUAijEktl49uWgNu/3/AAADnElEQVR4nO3di1biMBSF4ZZWrSYYVESKykW8ITrDvP/LTcXlmjVjKSfFnYTM/p+Ab+UEitgmSRhjjDHGGGOMMcYYY8xtw97owHGvo54736Q/MyZ3nTGzSzfI4cDkHT/lZjDEA69zX761Mb9DA0fGo+89c40FXvsGVkToKs59TuhnOXIv3gQhHOCAPf8z+p6ZwISDEJawWsQ+Cjj0TftshtqJgQxpNaaoa5vXMIa0Eo5AwstQhPkBhRRS6DsKKdxYn0JXUUghhf6jkEIK/Uchhf+xMJA/l1JIIYUhRGHr+p1DSC6FvfuL7tW6bk3jI0QP48eOJbK18H6qtGroZ5EBKorsaWxnbCl8XmiVNnaKAH4os7ENsZ3wpdziQwor4wNauNTbfFhhVhzJV7GN8FIAxAqrVRQTWwjvSgEQLMyKR6BwunUPOhBmGU54K5lRvLCQvqHaC69ES4hfwyfUGk5EPgdC6U60Fj7LhtSBUDim1sKXYITCDwxr4YVsG+KFmfBTn0IKKaSQQgoppJBCCimk0IvwnEIKKaSQQgoppJBCCimkkEIKKaSQQgoppJBCCincE2GXQgoppJBCCiMUvoKEb5B711oIrZ8qKBUehyLM5yBhigZKhT8sgXIhfCPKhNbbUC6Ej6lQaP2AVrEwPQUTRUJjvYQWwjTDEiXC3HoXWgmPsUSBMJ/ZvpHaCSuiX2EroJUwTTH3rAuF5qbVY6DthOkbblKbhbnptnxEsqWwGtXTAtORaSgftD4WwVq4ViLqnPQ21mb/7SREpLo7KCgMIgop3Nhh9ELhAwfwUUghhf6jkEIK/UchhRT6j0IKKfQfhRRS6D91HrtQv0QvRJ25HYxwgToFNxQhbBsGI9Sw06jPwhDqCxQwEKFawYBhCFV6ErdQLXBHwocgVPoK9UERglCpcnqL9ImFSmNaLZ+xPqlQTU8QIbefnVDBLqkcJBGqxS7/k+Q7gVCt9hkoEKrVHo9oIhCqdK9XcLsQe73hoi1ClfZ8v8JdaxZGAGwWKg2/4sDXJFQqAmCTUKUxABuFUQAbhDHswfc2CiNZwc1CDf5e6q4NwtL+LrhQqxeW975f1/dVK9QRAZNfNcKogHWnH8Y0okmdMDLgV2FcI5p8FZZL36/ou/vnnabE/crlq7/vewL+jOetAx05MBku/iyihv2W7rVRGTkwSW7V+lx1FeWIfjRZTpVedGP5PljffL7ff7lnjDHGGGOMMSbtN55QA0XsjAnlAAAAAElFTkSuQmCC"
+                alt="Image1" />
+            <a href="https://script.google.com/macros/s/AKfycbz7NVqmMzNAQ4uhrBylJpHr2YZwahYqLUz-yQdyRJ6lsHM9_dC49Kk42gsvTsgMMQtl/exec"
+                target="_blank" class="my-link">
+                <h3>מציג ארכיון הצ'אטים</h3>
+                <p>כלי אינטרנטי פשוט שמאפשר לטעון קבצי json של ייצוא גוגל צ'אט ולהציג בצורה מסודרת ומוכנה להעתקה את
+                    ההודעות והחברים בקבוצה.</p>
+            </a>
+        </div>
+        <div class="grid-item rectangular">
+            <img src="data:image/jpeg;base64,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"
+            alt="Image1" />
+            <a href="https://myhomepage.ml/"
+            target="_blank" class="my-link">
+                <h3>דף הבית - מומלץ</h3>
+                <p>דף בית חילופי למשתמשי נטפרי עם כלים ועזרים רבים והשמעת ערוצי מוזיקה, פותח ע"י @zvizvi</p>
+            </a>
+        </div>
+        <div class="grid-item square">
+            <img src="https://img.lovepik.com/photo/45012/1805.jpg_wh860.jpg"
+                alt="Image1" />
+            <a href="https://www.anyway.co.il/"
+                target="_blank" class="my-link">
+                <h3>anyway | מפת התאונות</h3>
+                <p>כלי אינטרנטי פשוט וקל לשימוש המציג את נתוני תאונות הדרכים בארץ ישראל ע"ג מפה וכולל פרטים נוספים על התאונה</p>
+            </a>
+        </div>
+        <div class="grid-item rectangular">
+            <img src="/img/IMG_20180506_001359.jpg" alt="Image 1" />
+            <a href="#modal1">
+                <h3>Image 1</h3>
+                <p>A short description of Image 1.</p>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- JavaScript to toggle the modal windows -->
+    <script>
+        // Get all the modal overlays and close buttons
+        const modalOverlays = document.querySelectorAll('.modal-overlay');
+        const closeButtons = document.querySelectorAll('.close-button');
+
+        // Add event listeners to each grid item link
+        const links = document.querySelectorAll('.grid-item a');
+        links.forEach((link, index) => {
+            link.addEventListener('click', () => {
+                // Show the corresponding modal overlay
+                modalOverlays[index].classList.add('show');
+
+                // Add event listener to close button
+                closeButtons[index].addEventListener('click', () => {
+                    modalOverlays[index].classList.remove('show');
+                });
+
+                // Add event listener to close overlay when clicking outside the modal
+                modalOverlays[index].addEventListener('click', (event) => {
+                    if (event.target === modalOverlays[index]) {
+                        modalOverlays[index].classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <footer>
+        <p style="font-size: 9px">Copyright &copy; 2023 My Website by abaye</p>
+    </footer>
+</body>
+
+</html>
