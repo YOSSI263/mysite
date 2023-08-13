@@ -1,4 +1,6 @@
- <script>
+<div id="output"></div>
+
+    <script>
         const param1 = new URLSearchParams(window.location.search).get('user');
         const param2 = new URLSearchParams(window.location.search).get('pass');
 
@@ -14,4 +16,4 @@
                 }
             })
             .catch(error => console.error(error));
-</script>
+    </script>
