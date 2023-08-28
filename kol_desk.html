@@ -6,15 +6,15 @@
     <title>תוספות לעמדות מחשב | ספירה</title>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMERG2MRGX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMERG2MRGX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-GMERG2MRGX');
-</script>
-    
+        gtag('config', 'G-GMERG2MRGX');
+    </script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
@@ -22,19 +22,11 @@
             margin: 0;
             padding: 0;
             font-family: Rubik, sans-serif;
-            font-size: 54px;
+            font-size: 40px;
             text-align: center;
             background-color: #f7f5ff;
             color: #370fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        #output:hover {
-            color: #53ff0f;
-            font-size: 60px;
+            height: 1%;
         }
 
         header {
@@ -53,6 +45,10 @@
 
         header:hover {
             color: #0561ff;
+        }
+
+        #output {
+            font-size: 32px;
         }
 
         .moving-image {
@@ -125,14 +121,33 @@
 
 <body>
     <header>
-        <p>אנא המתינו לטעינת האתר המבוקש</p>
+        <p>תוספות לעמדות מחשב גרסה v1.0.2</p>
     </header>
 
-    <div id="output">פותח ע"י אביי</div>
-</br>
-    <div id="output">ניתן ליצור קשר בכתובת</div>
-    </br>
-    <div id="output">cs@abaye.co</div>
+    <div><br><br><br><br><br></div>
+
+    <div id="obfuscatedText"></div>
+
+    <div id="output"><br><br>© כל הזכויות שמורות<br><br>
+
+        התוכנה פותחה ע"י אביי<br>
+        ליצירת קשר ניתן לפנות לכתובת המייל<br>
+        cs@abaye.co<br>
+    </div>
+
+    <script>
+        var encodedText = "&#128367; &#1500;&#1506;&quot;&#1504; &#1512;' &#1502;&#1513;&#1492; &#1489;&quot;&#1512; &#1488;&#1489;&#1512;&#1492;&#1501; &#1494;&#1510;&quot;&#1500; &#128367;";
+        var div = document.getElementById("obfuscatedText");
+        div.innerHTML = decodeEntities(encodedText);
+
+        function decodeEntities(encodedString) {
+            var elem = document.createElement('div');
+            elem.innerHTML = encodedString;
+            return elem.textContent;
+        }
+    </script>
+
+
 
     <lil class="moving-image" style="font-size: 32px">💡</lil>
 
