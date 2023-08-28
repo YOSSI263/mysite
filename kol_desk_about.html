@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <title>תוספות לעמדות מחשב | אודות</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMERG2MRGX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GMERG2MRGX');
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Rubik, sans-serif;
+            font-size: 40px;
+            text-align: center;
+            background-color: #f7f5ff;
+            color: #370fff;
+            height: 1%;
+        }
+
+        header {
+            background-color: #FFFFFF;
+            padding: 9px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            text-align: center;
+            font-size: 22px;
+            color: #AAAAAA;
+        }
+
+        header:hover {
+            color: #0561ff;
+        }
+
+        #output {
+            font-size: 32px;
+        }
+
+        .moving-image {
+            position: fixed;
+            /* Make the image position absolute */
+            bottom: 10%;
+            /* Position the image at the bottom of the screen */
+            right: 10%;
+            /* Position the image at the right of the screen */
+            animation: moveImage 5s infinite;
+            /* Use the moveImage animation for 5 seconds and repeat infinitely */
+        }
+
+        /* Set up the animation */
+        @keyframes moveImage {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(75%, -75%) rotate(25deg);
+                animation-timing-function: ease-out;
+            }
+
+            50% {
+                transform: translate(150%, -150%) rotate(-25deg);
+                animation-timing-function: ease-in;
+            }
+
+            75% {
+                transform: translate(420%, -75%) rotate(0deg);
+                animation-timing-function: ease-out;
+            }
+
+            90% {
+                transform: translate(0, 0) rotate(45deg);
+                animation-timing-function: ease-in;
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+                animation-timing-function: ease-in;
+            }
+        }
+
+        /* Apply the animation to the image */
+        .moving-image {
+            animation: moveImage 20s infinite;
+        }
+
+        footer {
+            background-color: #FFFFFF;
+            padding: 3px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            text-align: center;
+            font-size: 14px;
+            color: #AAAAAA;
+        }
+
+        footer:hover {
+            color: #0561ff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>תוספות לעמדות מחשב גרסה v1.0.2</p>
+    </header>
+
+    <div><br><br><br><br><br></div>
+
+    <div id="obfuscatedText"></div>
+
+    <div id="output"><br><br>© כל הזכויות שמורות<br><br>
+
+        התוכנה פותחה ע"י אביי<br>
+        ליצירת קשר ניתן לפנות לכתובת המייל<br>
+        cs@abaye.co<br>
+    </div>
+
+    <script>
+        var encodedText = "&#128367; &#1500;&#1506;&quot;&#1504; &#1512;' &#1502;&#1513;&#1492; &#1489;&quot;&#1512; &#1488;&#1489;&#1512;&#1492;&#1501; &#1494;&#1510;&quot;&#1500; &#128367;";
+        var div = document.getElementById("obfuscatedText");
+        div.innerHTML = decodeEntities(encodedText);
+
+        function decodeEntities(encodedString) {
+            var elem = document.createElement('div');
+            elem.innerHTML = encodedString;
+            return elem.textContent;
+        }
+    </script>
+
+
+
+    <lil class="moving-image" style="font-size: 32px">💡</lil>
+
+
+    <footer>
+        <p>Copyright &copy; 2023 by abaye</p>
+    </footer>
+</body>
+
+</html>
