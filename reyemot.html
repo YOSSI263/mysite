@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookmarklet</title>
+</head>
+<body>
+    <script>
+        // Place your JavaScript code here
+          // Get all elements with IDs like "extraInfo"
+  var elements = document.querySelectorAll('[id^="extraInfo"]');
+  
+  if (elements.length > 0) {
+    // Loop through each element
+    elements.forEach(function(element) {
+      // Get the text content of the element
+      var encodedFileName = element.textContent;
+      
+      // Decode the URL-encoded file name
+      var decodedFileName = decodeURIComponent(encodedFileName);
+      
+      // Update the element's text content with the decoded file name
+      element.textContent = decodedFileName;
+    });
+  } else {
+    alert("No elements with IDs like 'extraInfo' were found on this page.");
+  }
+    </script>
+</body>
+</html>
